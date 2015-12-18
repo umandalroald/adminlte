@@ -1,0 +1,11 @@
+{
+  "name": "jollibee",
+  "version": "1.0.0",
+  "description": "Jollibee dashboard theme",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roald Umandal",
+  "license": "ISC"
+}
