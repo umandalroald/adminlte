@@ -41,7 +41,7 @@ function adminlte_preprocess_page(&$vars, $hook) {
   }
 
   $vars['logout'] = '/user/logout';
-  $vars['profile'] = drupal_get_path_alias('profile-main/' . $user->uid);
+  $vars['profile'] = 'user/'.$user->uid;
   $roles = end($user->roles);
   $vars['role'] = ucfirst($roles);
   reset($user->roles);
