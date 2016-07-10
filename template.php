@@ -51,20 +51,22 @@ function adminlte_preprocess_page(&$vars, $hook) {
   $roles = end($user->roles);
   $vars['role'] = ucfirst($roles);
   reset($user->roles);
-  // Create custom variable for page tpl
+  // Check if user is login
   if(user_is_logged_in()) {
     $account = user_load($user->uid);
 
     $alt = t("@user's picture", array('@user' => format_username($user)));
-    // Display profile picture
+    // Display profile picture.
     if(!empty($account->picture)) {
       $user_picture = theme('image_style', array('style_name' => 'thumbnail', 'path' => $account->picture->uri, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'img-circle')));
       $user_picture_m = theme('image_style', array('style_name' => 'thumbnail', 'path' => $account->picture->uri, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'user-image')));
     }
-
+    // Assign profile picture in variables.
     $vars['avatar'] = $user_picture;
     $vars['avatarsm'] = $user_picture_m;
+
     $vars['history'] = 'Member for ' . format_interval(time() - $user->created);
+    
     $fullname = array(
       'firstname' => isset($profile->field_firstname['und']) ? $profile->field_firstname['und'][0]['value'] : '',
       'lastname' => isset($profile->field_lastname['und']) ? $profile->field_lastname['und'][0]['value'] : '',
