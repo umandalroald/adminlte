@@ -8,16 +8,6 @@ function adminlte_preprocess_html(&$variables) {
 }
 
 /**
- * Implement hook_init()
- */
-function adminlte_init() {
-  $theme_path = drupal_get_path('theme', $GLOBALS['theme']);
-  drupal_add_css('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css', 'external');
-  drupal_add_css('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css', 'external');
-  drupal_add_js($theme_path . '/dist/js/app.min.js', array('type' => 'file', 'scope' => 'footer'));
-}
-
-/**
  * Implement hook_preprocess_page()
  */
 function adminlte_preprocess_page(&$vars, $hook) {
@@ -28,7 +18,11 @@ function adminlte_preprocess_page(&$vars, $hook) {
   $theme_path = drupal_get_path('theme', 'adminlte');
 
   if (true) {
-    // jQuery 2.1.4
+    // Fontawesome 4.5.0
+    drupal_add_css('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css', array('type' => 'external', 'scope' => 'header'));
+    // Ionicons 2.0.1
+    drupal_add_css('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css', array('type' => 'external', 'scope' => 'header'));
+    // jQuery 2.2.3
     drupal_add_js($theme_path . '/plugins/jQuery/jQuery-2.2.3.min.js', array('type' => 'file', 'scope' => 'footer'));
     // Bootstrap 3.3.5
     drupal_add_js($theme_path . '/bootstrap/js/bootstrap.min.js', array('type' => 'file', 'scope' => 'footer'));
