@@ -20,7 +20,7 @@ function adminlte_init() {
 /**
  * Implement hook_preprocess_page()
  */
-function  adminlte_preprocess_page(&$vars, $hook) {
+function adminlte_preprocess_page(&$vars, $hook) {
   global $user;
   global $base_url;
 
