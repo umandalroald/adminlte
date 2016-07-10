@@ -24,7 +24,7 @@ function  adminlte_preprocess_page(&$vars, $hook) {
   global $user;
   global $base_url;
 
-  $vars['front_page'] = $base_url . '/dashboard';
+  $vars['front_page'] = $base_url;
   $theme_path = drupal_get_path('theme', 'adminlte');
 
   if (true) {
