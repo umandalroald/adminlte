@@ -1,11 +1,12 @@
 .logged-in.admin-menu .main-sidebar {
   padding-top: 80px;
+  z-index: 50;
 }
 
 .logged-in .main-header {
   position: relative;
   max-height: 100px;
-  z-index: 999;
+  z-index: 500;
 }
 
 .control-sidebar {
