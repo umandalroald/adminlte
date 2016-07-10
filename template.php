@@ -12,7 +12,7 @@ function adminlte_preprocess_html(&$variables) {
  */
 function adminlte_init() {
   $theme_path = drupal_get_path('theme', $GLOBALS['theme']);
-  drupal_add_css('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', 'external');
+  drupal_add_css('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css', 'external');
   drupal_add_css('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css', 'external');
   drupal_add_js($theme_path . '/dist/js/app.min.js', array('type' => 'file', 'scope' => 'footer'));
 }
