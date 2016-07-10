@@ -12,7 +12,6 @@ function adminlte_preprocess_html(&$variables) {
  */
 function adminlte_init() {
   $theme_path = drupal_get_path('theme', $GLOBALS['theme']);
-
   drupal_add_css('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', 'external');
   drupal_add_css('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css', 'external');
   drupal_add_js($theme_path . '/dist/js/app.min.js', array('type' => 'file', 'scope' => 'footer'));
@@ -26,7 +25,7 @@ function  adminlte_preprocess_page(&$vars, $hook) {
   global $base_url;
 
   $vars['front_page'] = $base_url . '/dashboard';
-  $theme_path = drupal_get_path('theme', ' adminlte');
+  $theme_path = drupal_get_path('theme', 'adminlte');
 
   if (true) {
     // jQuery 2.1.4
@@ -53,26 +52,22 @@ function  adminlte_preprocess_page(&$vars, $hook) {
   $vars['role'] = ucfirst($roles);
   reset($user->roles);
   // Create custom variable for page tpl
-  /*
   if(user_is_logged_in()) {
-    $profile = profile2_load_by_user($user, 'main');
     $account = user_load($user->uid);
 
     $alt = t("@user's picture", array('@user' => format_username($user)));
-    if (function_exists('identicon_identicon_image_path')) {
-      $image_path = identicon_identicon_image_path($user);
-      if(!empty($account->picture)) {
-        $user_picture = theme('image_style', array('style_name' => 'thumbnail', 'path' => $account->picture->uri, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'img-circle')));
-        $user_picture_m = theme('image_style', array('style_name' => 'thumbnail', 'path' => $account->picture->uri, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'user-image')));
-      }
-      else {
-        $user_picture = theme('image_style', array('style_name' => 'thumbnail', 'path' => $image_path, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'img-circle')));
-        $user_picture_m = theme('image_style', array('style_name' => 'thumbnail', 'path' => $image_path, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'user-image')));
-      }
 
-      $vars['avatar'] = $user_picture;
-      $vars['avatarsm'] = $user_picture_m;
+    if(!empty($account->picture)) {
+      $user_picture = theme('image_style', array('style_name' => 'thumbnail', 'path' => $account->picture->uri, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'img-circle')));
+      $user_picture_m = theme('image_style', array('style_name' => 'thumbnail', 'path' => $account->picture->uri, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'user-image')));
     }
+    else {
+      $user_picture = theme('image_style', array('style_name' => 'thumbnail', 'path' => $image_path, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'img-circle')));
+      $user_picture_m = theme('image_style', array('style_name' => 'thumbnail', 'path' => $image_path, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'user-image')));
+    }
+
+    $vars['avatar'] = $user_picture;
+    $vars['avatarsm'] = $user_picture_m;
     $vars['history'] = 'Member for ' . format_interval(time() - $user->created);
     $fullname = array(
       'firstname' => isset($profile->field_firstname['und']) ? $profile->field_firstname['und'][0]['value'] : '',
@@ -81,7 +76,6 @@ function  adminlte_preprocess_page(&$vars, $hook) {
 
     $vars['fullname'] = implode($fullname, ' ');
   }
-  */
 }
 
 /**
