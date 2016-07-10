@@ -171,7 +171,7 @@
       Vielsoft
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2015 <a href="https://vielsoft.com">Vielsoft</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->
