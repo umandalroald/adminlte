@@ -61,10 +61,6 @@ function adminlte_preprocess_page(&$vars, $hook) {
       $user_picture = theme('image_style', array('style_name' => 'thumbnail', 'path' => $account->picture->uri, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'img-circle')));
       $user_picture_m = theme('image_style', array('style_name' => 'thumbnail', 'path' => $account->picture->uri, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'user-image')));
     }
-    else {
-      $user_picture = theme('image_style', array('style_name' => 'thumbnail', 'path' => $image_path, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'img-circle')));
-      $user_picture_m = theme('image_style', array('style_name' => 'thumbnail', 'path' => $image_path, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'user-image')));
-    }
 
     $vars['avatar'] = $user_picture;
     $vars['avatarsm'] = $user_picture_m;
