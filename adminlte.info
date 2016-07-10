@@ -1,4 +1,4 @@
-name = BMS Admin LTE 7.x-3.5
+name = Admin LTE 7.x-3.5
 description = A flexible dashboard theme built on top of the AdminLTE theme
 core = 7.x
 
@@ -23,7 +23,7 @@ regions[page_bottom]    = 'Page bottom'
 
 stylesheets[all][] = bootstrap/css/bootstrap.min.css
 stylesheets[all][] = dist/css/AdminLTE.min.css
-stylesheets[all][] = dist/css/overrides.css
+stylesheets[all][] = css/styles.css
 stylesheets[all][] = dist/css/skins/skin-blue.min.css
 stylesheets[all][] = dist/css/skins/skin-yellow.min.css
 stylesheets[all][] = plugins/fullcalendar/fullcalendar.min.css
