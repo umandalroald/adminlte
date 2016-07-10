@@ -56,7 +56,7 @@ function adminlte_preprocess_page(&$vars, $hook) {
     $account = user_load($user->uid);
 
     $alt = t("@user's picture", array('@user' => format_username($user)));
-
+    // Display profile picture
     if(!empty($account->picture)) {
       $user_picture = theme('image_style', array('style_name' => 'thumbnail', 'path' => $account->picture->uri, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'img-circle')));
       $user_picture_m = theme('image_style', array('style_name' => 'thumbnail', 'path' => $account->picture->uri, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'user-image')));
