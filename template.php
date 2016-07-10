@@ -29,7 +29,7 @@ function adminlte_preprocess_page(&$vars, $hook) {
 
   if (true) {
     // jQuery 2.1.4
-    drupal_add_js($theme_path . '/plugins/jQuery/jQuery-2.1.4.min.js', array('type' => 'file', 'scope' => 'footer'));
+    drupal_add_js($theme_path . '/plugins/jQuery/jQuery-2.2.3.min.js', array('type' => 'file', 'scope' => 'footer'));
     // Bootstrap 3.3.5
     drupal_add_js($theme_path . '/bootstrap/js/bootstrap.min.js', array('type' => 'file', 'scope' => 'footer'));
     // jQuery UI
@@ -66,7 +66,7 @@ function adminlte_preprocess_page(&$vars, $hook) {
     $vars['avatarsm'] = $user_picture_m;
 
     $vars['history'] = 'Member for ' . format_interval(time() - $user->created);
-    
+
     $fullname = array(
       'firstname' => isset($profile->field_firstname['und']) ? $profile->field_firstname['und'][0]['value'] : '',
       'lastname' => isset($profile->field_lastname['und']) ? $profile->field_lastname['und'][0]['value'] : '',
