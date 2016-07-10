@@ -1,0 +1,82 @@
+.button.button-dark:not(.button-clear) {
+  background-color: #087B99;
+  border-color: #076881;
+}
+.button.button-dark:not(.button-clear).activated {
+  background-color: #055469;
+}
+.bar-positive {
+  background-color: #087B99 !important;
+  border-color: #055469 !important;
+}
+.tabs-positive .tabs {
+  background-color: #087B99 !important;
+}
+.menu-left .bar-dark {
+  background-color: #1A1A1A;
+  border-color: #262626;
+}
+.menu-left .scroll-content {
+  background-color: #141414;
+}
+.menu-left .scroll-content .item-dark .item-content {
+  background-color: #1A1A1A;
+  border-color: #262626;
+}
+.menu-left .scroll-content .item-dark .item-content i {
+  color: #737373;
+}
+.lock-screen .disclaimer-slide span, .lock-screen .disclaimer-slide h1, .lock-screen .disclaimer-slide h2, .lock-screen .disclaimer-slide h3, .lock-screen .disclaimer-slide h4, .lock-screen .disclaimer-slide h5 {
+  color: #087B99 !important;
+}
+.lock-screen .pin-slide {
+  background-color: #41C3E1 !important;
+}
+.lock-screen .pin-slide .numpad .button-key {
+  background-color: #41C3E1 !important;
+}
+.lock-screen .pin-slide .button {
+  color: #FFFFFF;
+}
+.dashboard .row-content .button-large {
+  border-color: #087B99 !important;
+  color: #087B99 !important;
+}
+.dashboard .row-content h3 {
+  color: #087B99 !important;
+  margin-top: 10px;
+  font-weight: normal;
+}
+.attendance .scroll-content {
+  background-color: #41C3E1;
+}
+.attendance .scroll-content .clock-box {
+  border-color: #FFFFFF;
+}
+.attendance .scroll-content .clock-box small, .attendance .scroll-content .clock-box span, .attendance .scroll-content .clock-box h1, .attendance .scroll-content .clock-box h2, .attendance .scroll-content .clock-box h3, .attendance .scroll-content .clock-box h4, .attendance .scroll-content .clock-box h5 {
+  border-color: #FFFFFF !important;
+  color: #FFFFFF !important;
+}
+.attendance .scroll-content .list {
+  background-color: #41C3E1;
+}
+.attendance .scroll-content .list label.item {
+  background-color: #FFFFFF;
+  border-color: #087B99;
+}
+.attendance .scroll-content .list label.item span {
+  color: #087B99;
+}
+.attendance .scroll-content .list label.item input {
+  background-color: #FFFFFF;
+}
+.attendance .scroll-content .bar-dark .button {
+  background-color: #087B99;
+  border-color: #076881;
+}
+.attendance .scroll-content .bar-dark .button.activated {
+  background-color: #055469;
+}
+.cash-management .scroll-content {
+  background-color: #e5e5e5;
+}

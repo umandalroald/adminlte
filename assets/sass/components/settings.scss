@@ -1,0 +1,70 @@
+section.content-header {
+  h1.page-header {
+    padding: 15px;
+  }
+}
+
+.view-display-id-manage_employee {
+
+  .view-header {
+    margin-top: 7px;
+    width: 19%;
+  }
+
+  .view-content {
+    margin: 30px -15px;
+    .views-row {
+      width: 20%;
+      margin-right: -3px;
+      padding: 0 15px;
+      .box.box-primary {
+        border-radius: 0px;
+        border-top: 5px solid #01bff1;
+        .box-profile {
+          padding: 20px 10px;
+        }
+      }
+    }
+    .views-row:nth-child(5n+1) {
+      .box.box-primary {
+        border-top: 5px solid #01bff1;
+      }
+    }
+    .views-row:nth-child(5n+2) {
+      .box.box-primary {
+        border-top: 5px solid #01a65a;
+      }
+    }
+    .views-row:nth-child(5n+3) {
+      .box.box-primary {
+        border-top: 5px solid #f39d12;
+      }
+    }
+    .views-row:nth-child(5n+4) {
+      .box.box-primary {
+        border-top: 5px solid #de4b39;
+      }
+    }
+    .views-row:nth-child(5n+5) {
+      .box.box-primary {
+        border-top: 5px solid #3acccc;
+      }
+    }
+  }
+
+  .views-exposed-widgets {
+    #edit-name-wrapper {
+      width: 30%;
+    }
+    #edit-title-wrapper {
+      width: 20%;
+    }
+    input#edit-name {
+      background: url(../../images/magnifier.jpg) no-repeat #fff;
+      background-position: right 0px;
+      background-size: auto 100%;
+      font-style: italic;
+    }
+  }
+    
+}

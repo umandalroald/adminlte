@@ -1,5 +1,5 @@
-name = AdminLTE
-description = AdminLTE is a fully responsive theme for admin panels. It is rich with features and simple to use. Full support for Bootstrap 3.x.
+name = BMS Admin LTE 7.x-3.5
+description = A flexible dashboard theme built on top of the AdminLTE theme
 core = 7.x
 
 ;;;;;;;;;;;;;;;;;;;;;
@@ -21,31 +21,10 @@ regions[page_bottom]    = 'Page bottom'
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
-stylesheets[all][] = css/style.css
-stylesheets[all][] = css/bootstrap.min.css
-stylesheets[all][] = css/font-awesome.min.css
-stylesheets[all][] = css/ionicons.min.css
-stylesheets[all][] = css/morris/morris.css
-stylesheets[all][] = css/jvectormap/jquery-jvectormap-1.2.2.css
-stylesheets[all][] = css/fullcalendar/fullcalendar.css
-stylesheets[all][] = css/daterangepicker/daterangepicker-bs3.css
-stylesheets[all][] = css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css
-stylesheets[all][] = css/AdminLTE.css
-
-;;;;;;;;;;;;;;;;;;;
-;; Scripts
-;;;;;;;;;;;;;;;;;;;;;
-
-scripts[] = '/js/jquery-ui-1.10.3.min.js'
-scripts[] = '/js/bootstrap.min.js'
-scripts[] = '/js/plugins/morris/morris.min.js'
-scripts[] = '/js/plugins/sparkline/jquery.sparkline.min.js'
-scripts[] = '/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js'
-scripts[] = '/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'
-scripts[] = '/js/plugins/fullcalendar/fullcalendar.min.js'
-scripts[] = '/js/plugins/jqueryKnob/jquery.knob.js'
-scripts[] = '/js/plugins/daterangepicker/daterangepicker.js'
-scripts[] = '/js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js'
-scripts[] = '/js/plugins/iCheck/icheck.min.js'
-scripts[] = '/js/AdminLTE/app.js'
-scripts[] = '/js/AdminLTE/dashboard.js'
+stylesheets[all][] = bootstrap/css/bootstrap.min.css
+stylesheets[all][] = dist/css/AdminLTE.min.css
+stylesheets[all][] = dist/css/overrides.css
+stylesheets[all][] = dist/css/skins/skin-blue.min.css
+stylesheets[all][] = dist/css/skins/skin-yellow.min.css
+stylesheets[all][] = plugins/fullcalendar/fullcalendar.min.css
+stylesheets[print][] = plugins/fullcalendar/fullcalendar.print.css
