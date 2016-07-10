@@ -64,15 +64,10 @@ function adminlte_preprocess_page(&$vars, $hook) {
     // Assign profile picture in variables.
     $vars['avatar'] = $user_picture;
     $vars['avatarsm'] = $user_picture_m;
-
+    // Display history of member.
     $vars['history'] = 'Member for ' . format_interval(time() - $user->created);
-
-    $fullname = array(
-      'firstname' => isset($profile->field_firstname['und']) ? $profile->field_firstname['und'][0]['value'] : '',
-      'lastname' => isset($profile->field_lastname['und']) ? $profile->field_lastname['und'][0]['value'] : '',
-    );
-
-    $vars['fullname'] = implode($fullname, ' ');
+    // Display username or you can change this to set the fullname of user login.
+    $vars['fullname'] = $account->name;
   }
 }
 
