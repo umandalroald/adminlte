@@ -7,10 +7,12 @@
     <!-- Logo -->
     <a href="<?php print $front_page ?>" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" /></span>
-      <!-- logo for regular state and mobile devices -->
-      <!-- <span class="logo-lg"><b>Admin</b>LTE</span> -->
-      <span class="logo-lg"><img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" /></span>
+      <?php if(isset($logo)): ?>
+        <span class="logo-mini"><img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" /></span>
+        <!-- logo for regular state and mobile devices -->
+        <!-- <span class="logo-lg"><b>Admin</b>LTE</span> -->
+        <span class="logo-lg"><img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" /></span>
+      <?php endif; ?>
     </a>
     <?php if($logged_in): ?>
     <!-- Header Navbar -->
