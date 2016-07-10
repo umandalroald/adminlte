@@ -8,10 +8,10 @@
     <a href="<?php print $front_page ?>" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <?php if(isset($logo)): ?>
-        <span class="logo-mini"><img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" /></span>
+        <!-- <span class="logo-mini"><img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" /></span>-->
         <!-- logo for regular state and mobile devices -->
-        <!-- <span class="logo-lg"><b>Admin</b>LTE</span> -->
-        <span class="logo-lg"><img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" /></span>
+        <span class="logo-lg"><b>Admin</b>LTE</span>
+        <!-- <span class="logo-lg"><img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>" /></span> -->
       <?php endif; ?>
     </a>
     <?php if($logged_in): ?>
@@ -25,7 +25,6 @@
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <!-- Notifications Menu -->
-          <!--
           <li class="dropdown notifications-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-bell-o"></i>
@@ -45,7 +44,6 @@
               <li class="footer"><a href="#">View all</a></li>
             </ul>
           </li>
-          -->
           <!-- User Account Menu -->
           <li class="dropdown user user-menu">
             <!-- Menu Toggle Button -->
@@ -66,20 +64,6 @@
                   <small><?php print $history; ?></small>
                 </p>
               </li>
-              <!-- Menu Body -->
-              <!--
-              <li class="user-body">
-                <div class="col-xs-4 text-center">
-                  <a href="#">Followers</a>
-                </div>
-                <div class="col-xs-4 text-center">
-                  <a href="#">Sales</a>
-                </div>
-                <div class="col-xs-4 text-center">
-                  <a href="#">Friends</a>
-                </div>
-              </li>
-              -->
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
@@ -92,11 +76,9 @@
             </ul>
           </li>
           <!-- Control Sidebar Toggle Button -->
-          <!--
           <li>
             <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
           </li>
-          -->
         </ul>
       </div>
     </nav>
