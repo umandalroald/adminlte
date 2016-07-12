@@ -48,6 +48,7 @@ function adminlte_preprocess_page(&$vars, $hook) {
   // Check if user is login
   if(user_is_logged_in()) {
     $account = user_load($user->uid);
+    $avatar_uri = drupal_get_path('theme', 'adminlte') . '/img/avatar.png';
 
     $alt = t("@user's picture", array('@user' => format_username($user)));
     // Display profile picture.
@@ -55,6 +56,11 @@ function adminlte_preprocess_page(&$vars, $hook) {
       $user_picture = theme('image_style', array('style_name' => 'thumbnail', 'path' => $account->picture->uri, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'img-circle')));
       $user_picture_m = theme('image_style', array('style_name' => 'thumbnail', 'path' => $account->picture->uri, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'user-image')));
     }
+    else {
+      $user_picture = theme('adminlte_image_style', array('style_name' => 'thumbnail', 'path' => $avatar_uri, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'img-circle')));
+      $user_picture_m = theme('adminlte_image_style', array('style_name' => 'thumbnail', 'path' => $avatar_uri, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'user-image')));
+    }
+
     // Assign profile picture in variables.
     $vars['avatar'] = $user_picture;
     $vars['avatarsm'] = $user_picture_m;
@@ -63,6 +69,24 @@ function adminlte_preprocess_page(&$vars, $hook) {
     // Display username or you can change this to set the fullname of user login.
     $vars['fullname'] = $account->name;
   }
+}
+
+/**
+ * Source https://api.drupal.org/api/drupal/modules%21image%21image.module/function/theme_image_style/7.x
+ *
+ * Usage is the same as theme_image_style.
+ *
+ * @param $variables
+ */
+function adminlte_image_style($variables) {
+  $styled_path = image_style_path($variables['style_name'], $variables['path']);
+
+  if (!file_exists($styled_path)) {
+    $style = image_style_load($variables['style_name']);
+    image_style_create_derivative($style, $variables['path'], $styled_path);
+  }
+  $variables['path'] = $styled_path;
+  return theme('image', $variables);
 }
 
 /**
@@ -468,4 +492,21 @@ function adminlte_preprocess_views_view(&$variables) {
   if (function_exists($function_name)) {
     $function_name($variables);
   }
+}
+
+/**
+ * Implement hook_theme()
+ */
+function adminlte_theme() {
+  return array(
+    'adminlte_image_style' => array(
+      'variables' => array(
+        'style_name' => NULL,
+        'path' => NULL,
+        'alt' => '',
+        'title' => NULL,
+        'attributes' => array(),
+      ),
+    ),
+  );
 }
