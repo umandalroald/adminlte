@@ -58,6 +58,5 @@ function adminlte_form_system_theme_settings_alter(&$form, $form_state) {
       12 => t('skin-black-light'),
     ),
     '#default_value' => theme_get_setting('skin'),
-    //'#description'   => t("Place this text in the widget spot on your site."),
   );
 }
