@@ -22,6 +22,7 @@ function adminlte_form_system_theme_settings_alter(&$form, $form_state) {
   $form['adminlte_group']['layout_group'] = array(
     '#type' => 'fieldset',
     '#title' => t('Layout Options'),
+    '#description' => t('Enable AdminLTE layout'),
     '#weight' => -20,
     '#collapsible' => TRUE,
     '#collapsed' => TRUE,
