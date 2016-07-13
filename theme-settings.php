@@ -37,8 +37,7 @@ function adminlte_form_system_theme_settings_alter(&$form, $form_state) {
       3 => t('sidebar-collapse'),
       4 => t('sidebar-mini'),
     ),
-    //'#default_value' => theme_get_setting('theme_skin'),
-    //'#description'   => t("Place this text in the widget spot on your site."),
+    '#default_value' => theme_get_setting('layout_options'),
   );
 
   $form['adminlte_group']['skin_group']['skin'] = array(
@@ -58,7 +57,7 @@ function adminlte_form_system_theme_settings_alter(&$form, $form_state) {
       11 => t('skin-black'),
       12 => t('skin-black-light'),
     ),
-    //'#default_value' => theme_get_setting('theme_skin'),
+    //'#default_value' => theme_get_setting('skin'),
     //'#description'   => t("Place this text in the widget spot on your site."),
   );
 }
