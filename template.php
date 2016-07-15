@@ -5,7 +5,8 @@
  */
 function adminlte_preprocess_html(&$variables) {
   $skin = theme_get_setting('skin');
-  $variables['classes_array'][] = 'hold-transition ' . $skin . ' sidebar-mini';
+  $layout = theme_get_setting('layout_options');
+  $variables['classes_array'][] = 'hold-transition ' . $skin . ' sidebar-mini ' . $layout['layout-boxed'];
 }
 
 /**
