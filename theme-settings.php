@@ -54,8 +54,8 @@ function adminlte_form_system_theme_settings_alter(&$form, $form_state) {
       'skin-blue' => t('skin-blue'),
       'skin-red' => t('skin-red'),
       'skin-red-light' => t('skin-red-light'),
-      11 => t('skin-black'),
-      12 => t('skin-black-light'),
+      'skin-black' => t('skin-black'),
+      'skin-black-light' => t('skin-black-light'),
     ),
     '#default_value' => theme_get_setting('skin'),
   );
