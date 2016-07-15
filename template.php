@@ -4,7 +4,8 @@
  * Implement hook_preprocess_html()
  */
 function adminlte_preprocess_html(&$variables) {
-  $variables['classes_array'][] = 'hold-transition skin-blue sidebar-mini';
+  $skin = theme_get_setting('skin');
+  $variables['classes_array'][] = 'hold-transition ' . $skin . ' sidebar-mini';
 }
 
 /**
