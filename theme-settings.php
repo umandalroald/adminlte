@@ -16,7 +16,7 @@ function adminlte_form_system_theme_settings_alter(&$form, $form_state) {
     '#description' => t('Enable AdminLTE theme skin'),
     '#weight' => -20,
     '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
+    '#collapsed' => FALSE,
   );
 
   $form['adminlte_group']['layout_group'] = array(
@@ -25,7 +25,7 @@ function adminlte_form_system_theme_settings_alter(&$form, $form_state) {
     '#description' => t('Enable AdminLTE layout'),
     '#weight' => -20,
     '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
+    '#collapsed' => FALSE,
   );
 
   $form['adminlte_group']['layout_group']['layout_options'] = array(
