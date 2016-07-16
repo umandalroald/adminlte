@@ -13,7 +13,7 @@ function adminlte_form_system_theme_settings_alter(&$form, $form_state) {
   $form['adminlte_group']['skin_group'] = array(
     '#type' => 'fieldset',
     '#title' => t('Skin'),
-    '#description' => t('Enable AdminLTE theme skin'),
+    '#description' => t('Enable theme skin'),
     '#weight' => -20,
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
