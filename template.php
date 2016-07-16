@@ -335,19 +335,6 @@ function adminlte_preprocess_table__field_collection_table(&$vars) {
   }
 }
 
-/*
-function  adminlte_preprocess_entity(&$variables) {
-  $bundle = $variables['elements']['#entity']->type;
-  if($bundle == 'commissary') {
-    $variables['title'] = '';
-    foreach($variables['theme_hook_suggestions'] as &$suggestion) {
-      $suggestion = 'entity__' . $suggestion;
-      dpm($suggestion);
-    }
-  }
-}
-*/
-
 function adminlte_table($variables) {
   $header = $variables['header'];
   $rows = $variables['rows'];
