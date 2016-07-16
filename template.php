@@ -335,6 +335,9 @@ function adminlte_preprocess_table__field_collection_table(&$vars) {
   }
 }
 
+/**
+ * Implement hook_table().
+ */
 function adminlte_table($variables) {
   $header = $variables['header'];
   $rows = $variables['rows'];
