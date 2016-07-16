@@ -4,7 +4,7 @@ function adminlte_form_system_theme_settings_alter(&$form, $form_state) {
 
   $form['adminlte_group'] = array(
     '#type' => 'fieldset',
-    '#title' => t('BMS AdminLTE'),
+    '#title' => t('AdminLTE Configuration'),
     '#weight' => -20,
     '#collapsible' => TRUE,
     '#collapsed' => FALSE,
