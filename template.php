@@ -19,28 +19,26 @@ function adminlte_preprocess_page(&$vars, $hook) {
   $vars['front_page'] = $base_url;
   $theme_path = drupal_get_path('theme', 'adminlte');
 
-  if (true) {
-    // Fontawesome 4.5.0
-    drupal_add_css('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css', array('type' => 'external', 'scope' => 'header'));
-    // Ionicons 2.0.1
-    drupal_add_css('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css', array('type' => 'external', 'scope' => 'header'));
-    // jQuery 2.2.3
-    drupal_add_js($theme_path . '/plugins/jQuery/jQuery-2.2.3.min.js', array('type' => 'file', 'scope' => 'footer'));
-    // Bootstrap 3.3.5
-    drupal_add_js($theme_path . '/bootstrap/js/bootstrap.min.js', array('type' => 'file', 'scope' => 'footer'));
-    // jQuery UI
-    drupal_add_js('https://code.jquery.com/ui/1.11.4/jquery-ui.min.js', array('type' => 'external', 'scope' => 'footer'));
-    // FastClick
-    drupal_add_js($theme_path . '/plugins/fastclick/fastclick.min.js', array('type' => 'file', 'scope' => 'footer'));
-    // AdminLTE App
-    drupal_add_js($theme_path . '/dist/js/app.min.js', array('type' => 'file', 'scope' => 'footer'));
-    // Moment
-    drupal_add_js('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js', array('type' => 'external', 'scope' => 'footer'));
-    // Fullcalendar
-    drupal_add_js($theme_path . '/plugins/fullcalendar/fullcalendar.min.js', array('type' => 'file', 'scope' => 'footer'));
-    // Additional js for theme.
-    drupal_add_js($theme_path . '/assets/js/script.js', array('type' => 'file', 'scope' => 'footer'));
-  }
+  // Fontawesome 4.5.0
+  drupal_add_css('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css', array('type' => 'external', 'scope' => 'header'));
+  // Ionicons 2.0.1
+  drupal_add_css('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css', array('type' => 'external', 'scope' => 'header'));
+  // jQuery 2.2.3
+  drupal_add_js($theme_path . '/plugins/jQuery/jQuery-2.2.3.min.js', array('type' => 'file', 'scope' => 'footer'));
+  // Bootstrap 3.3.5
+  drupal_add_js($theme_path . '/bootstrap/js/bootstrap.min.js', array('type' => 'file', 'scope' => 'footer'));
+  // jQuery UI
+  drupal_add_js('https://code.jquery.com/ui/1.11.4/jquery-ui.min.js', array('type' => 'external', 'scope' => 'footer'));
+  // FastClick
+  drupal_add_js($theme_path . '/plugins/fastclick/fastclick.min.js', array('type' => 'file', 'scope' => 'footer'));
+  // AdminLTE App
+  drupal_add_js($theme_path . '/dist/js/app.min.js', array('type' => 'file', 'scope' => 'footer'));
+  // Moment
+  drupal_add_js('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js', array('type' => 'external', 'scope' => 'footer'));
+  // Fullcalendar
+  drupal_add_js($theme_path . '/plugins/fullcalendar/fullcalendar.min.js', array('type' => 'file', 'scope' => 'footer'));
+  // Additional js for theme.
+  drupal_add_js($theme_path . '/assets/js/script.js', array('type' => 'file', 'scope' => 'footer'));
 
   $vars['logout'] = '/user/logout';
   $vars['profile'] = 'user/'.$user->uid;
