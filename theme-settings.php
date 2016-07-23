@@ -38,7 +38,7 @@ function adminlte_form_system_theme_settings_alter(&$form, $form_state) {
       'layout-boxed' => t('layout-boxed'),
       'layout-top-nav' => t('layout-top-nav'),
       'sidebar-collapse' => t('sidebar-collapse'),
-      'sidebar-mini' => t('sidebar-mini'),
+      //'sidebar-mini' => t('sidebar-mini'),
     ),
     '#default_value' => theme_get_setting('layout_options'),
   );
