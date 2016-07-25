@@ -57,8 +57,10 @@ function adminlte_preprocess_page(&$vars, $hook) {
       $user_picture_m = theme('image_style', array('style_name' => 'thumbnail', 'path' => $account->picture->uri, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'user-image')));
     }
     else {
-      $user_picture = theme('adminlte_image_style', array('style_name' => 'thumbnail', 'path' => $avatar_uri, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'img-circle')));
-      $user_picture_m = theme('adminlte_image_style', array('style_name' => 'thumbnail', 'path' => $avatar_uri, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'user-image')));
+      $user_picture_config = array('style_name' => 'thumbnail', 'path' => $avatar_uri, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'img-circle'));
+      $user_picture_m_config = array('style_name' => 'thumbnail', 'path' => $avatar_uri, 'alt' => $alt, 'title' => $alt, 'attributes' => array('class' => 'user-image'));
+      $user_picture = adminlte_image_style($user_picture_config);
+      $user_picture_m = adminlte_image_style($user_picture_m_config);
     }
 
     // Assign profile picture in variables.
